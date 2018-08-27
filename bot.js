@@ -27,3 +27,4 @@ client.user.setGame(`playing`,"3K Server")
   console.log('')
   console.log('')
 });
+client.login(process.env.BOT_TOKEN);
