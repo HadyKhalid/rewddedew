@@ -135,45 +135,147 @@ const cuttweet = [
     }
 });
 
-const secre = [
-  "**لو خيروك بين العيش وحدك في جزيرة كبيرة منعزلة مع أكبر درجات الرفاهية وبين العيش في مكان قديم ولكن مع أصدقائك المقربين**.",
-  "**لو خيروك بين فقدان ذاكرتك والعيش مع أصدقائك وأقربائك أو بقاء ذاكرتك ولكن العيش وحيد**.",
-  "**للو خيروك بين تناول الخضار والفاكهة طوال حياتك أو تناول اللحوم**.",
-  "**لو خيروك بين رؤية الأشباح فقط أو سماع صوتها فقط**.",
-  "**لو خيروك بين القدرة على سماع أفكار الناس أو القدرة على العودة في الزمن للخلف**.", 
-  "**لو خيروك بين القدرة على الاختفاء أو القدرة على الطيران**.", 
-  "**لو خيروك بين أن تعيش 5 دقائق في الماضي أو أن تعيشها في المستقبل**.", 
-  "**لو خيروك بين 5 ملايين دولار أو 5 ملايين لحظة سعادة حقيقيةا**.", 
-  "**لو خيروك بين الاعتذار عن خطأ اقترفته أو أن يقدم لك شخص أخطأ في حقق اعتذار**.", 
-  "**لو خيروك بين الحقد أو المسامحة**.", 
-  "**لو خيروك بين إنقاذ نفسك أو إنقاذ شخص وقد يعرضك ذلك للأذى**.",
-  "**لو خيروك بين أن تعيش في القرن الرابع عشر أو القرن الحالي**.", 
-  "**لو خيروك بين امتلاك سرعة الفهد أو دهاء الثعلب**.", 
-  "**لو خيروك بين أن تحصل على درجة كاملة في كامل اختباراتك القادمة والسابقة أو أن تسافر إلى بلد تحبه**.", 
-  "**لو خيروك بين العيش بجانب الجبال والحدائق والأشجار أو العيش بجانب البحر**.", 
-  "**لو خيروك بين تحقيق 3 أمنيات (لا تتعلق بأشخاص) أو اختيار 3 أشخاص للعيش معهم طوال حياتك**.", 
-  "**لو خيروك بين النوم في غابة مظلمة أو على ظهر سفينة في يوم عاصف**.", 
-  "**لو خيروك بين المال أو الجمال**.", 
-  "**لو خيروك بين المال أو الذكاء**.", 
-  "**لو خيروك بين المال أو الصحة**.", 
-  "**لو خيروك بين الجمال أو الذكاء**.", 
-  "**لو خيروك بين الذكاء أو الصحة**.", 
-  "**لو خيروك بين إرسال رسالة صوتية لأمك مدة دقيقة كاملة لا تحتوي إلا على صراخك وخوفك، أو كسر بيضة نيئة على رأسك**.", 
+client.on('message', message => {
+    if(message.channel.type === "dm") return;
+      if(message.content.startsWith ("!زواج")) {
+      if(!message.channel.guild) return message.reply(' This command only for servers ')
+      var proposed = message.mentions.members.first()
+
+      if(!message.mentions.members.first()) return message.reply('لازم تطلب ايد وحدة').catch(console.error);
+      if(message.mentions.users.size > 1) return message.reply('ولد ما يضبط لازم بنت تذكر لازم بنت الحلال').catch(console.error);
+       if(proposed === message.author) return message.reply(`**خنثى ؟ **`);
+        if(proposed === client.user) return message.reply(`** تبي تتزوجني؟ **`);
+              message.channel.send(`**${proposed} 
+ بدك تقبلي عرض الزواج من ${message.author}
+ العرض لمدة 10 ثانية 
+ اكتب موافقة او لا**`)
+
+const filter = m => m.content.startsWith("موافقة");
+message.channel.awaitMessages(filter, { max: 1, time: 15000, errors: ['time'] })
+.then(collected =>{ 
+    message.channel.send(`**${message.author} و ${proposed} الف الف مبروك انشاء الله تستمتعون بحياتكم الزوجية ويطول اعماركم ولا تنسون شهر العسل**`);
+})
+   .catch(collected => message.channel.send(`**السكوت علامة الرضا نقول قلللوش مبروك**`))
+
+   const filte = m => m.content.startsWith("لا");
+message.channel.awaitMessages(filte, { max: 1, time: 15000, errors: ['time'] })
+.then(collected =>{ 
+   message.channel.send(`**${message.author} تم رفض عرضك**`);
+})
+
+
+client.on('message', message => {
+    if(message.channel.type === "dm") return;
+      if(message.content.startsWith ("!زواج")) {
+      if(!message.channel.guild) return message.reply(' This command only for servers ')
+      var proposed = message.mentions.members.first()
+
+      if(!message.mentions.members.first()) return message.reply('لازم تطلب ايد وحدة').catch(console.error);
+      if(message.mentions.users.size > 1) return message.reply('ولد ما يضبط لازم بنت تذكر لازم بنت الحلال').catch(console.error);
+       if(proposed === message.author) return message.reply(`**خنثى ؟ **`);
+        if(proposed === client.user) return message.reply(`** تبي تتزوجني؟ **`);
+              message.channel.send(`**${proposed} 
+ بدك تقبلي عرض الزواج من ${message.author}
+ العرض لمدة 10 ثانية 
+ اكتب موافقة او لا**`)
+
+const filter = m => m.content.startsWith("موافقة");
+message.channel.awaitMessages(filter, { max: 1, time: 15000, errors: ['time'] })
+.then(collected =>{ 
+    message.channel.send(`**${message.author} و ${proposed} الف الف مبروك انشاء الله تستمتعون بحياتكم الزوجية ويطول اعماركم ولا تنسون شهر العسل**`);
+})
+   .catch(collected => message.channel.send(`**السكوت علامة الرضا نقول قلللوش مبروك**`))
+
+   const filte = m => m.content.startsWith("لا");
+message.channel.awaitMessages(filte, { max: 1, time: 15000, errors: ['time'] })
+.then(collected =>{ 
+   message.channel.send(`**${message.author} تم رفض عرضك**`);
+})
+
+client.on('message', message => {
+    if(message.channel.type === "dm") return;
+      if(message.content.startsWith ("!زواج")) {
+      if(!message.channel.guild) return message.reply(' This command only for servers ')
+      var proposed = message.mentions.members.first()
+
+      if(!message.mentions.members.first()) return message.reply('لازم تطلب ايد وحدة').catch(console.error);
+      if(message.mentions.users.size > 1) return message.reply('ولد ما يضبط لازم بنت تذكر لازم بنت الحلال').catch(console.error);
+       if(proposed === message.author) return message.reply(`**خنثى ؟ **`);
+        if(proposed === client.user) return message.reply(`** تبي تتزوجني؟ **`);
+              message.channel.send(`**${proposed} 
+ بدك تقبلي عرض الزواج من ${message.author}
+ العرض لمدة 10 ثانية 
+ اكتب موافقة او لا**`)
+
+const filter = m => m.content.startsWith("موافقة");
+message.channel.awaitMessages(filter, { max: 1, time: 15000, errors: ['time'] })
+.then(collected =>{ 
+    message.channel.send(`**${message.author} و ${proposed} الف الف مبروك انشاء الله تستمتعون بحياتكم الزوجية ويطول اعماركم ولا تنسون شهر العسل**`);
+})
+   .catch(collected => message.channel.send(`**السكوت علامة الرضا نقول قلللوش مبروك**`))
+
+   const filte = m => m.content.startsWith("لا");
+message.channel.awaitMessages(filte, { max: 1, time: 15000, errors: ['time'] })
+.then(collected =>{ 
+   message.channel.send(`**${message.author} تم رفض عرضك**`);
+})
+
+
+client.on('message', message => {
+    if(message.channel.type === "dm") return;
+      if(message.content.startsWith ("!زواج")) {
+      if(!message.channel.guild) return message.reply(' This command only for servers ')
+      var proposed = message.mentions.members.first()
+
+      if(!message.mentions.members.first()) return message.reply('لازم تطلب ايد وحدة').catch(console.error);
+      if(message.mentions.users.size > 1) return message.reply('ولد ما يضبط لازم بنت تذكر لازم بنت الحلال').catch(console.error);
+       if(proposed === message.author) return message.reply(`**خنثى ؟ **`);
+        if(proposed === client.user) return message.reply(`** تبي تتزوجني؟ **`);
+              message.channel.send(`**${proposed} 
+ بدك تقبلي عرض الزواج من ${message.author}
+ العرض لمدة 10 ثانية 
+ اكتب موافقة او لا**`)
+
+const filter = m => m.content.startsWith("موافقة");
+message.channel.awaitMessages(filter, { max: 1, time: 15000, errors: ['time'] })
+.then(collected =>{ 
+    message.channel.send(`**${message.author} و ${proposed} الف الف مبروك انشاء الله تستمتعون بحياتكم الزوجية ويطول اعماركم ولا تنسون شهر العسل**`);
+})
+   .catch(collected => message.channel.send(`**السكوت علامة الرضا نقول قلللوش مبروك**`))
+
+   const filte = m => m.content.startsWith("لا");
+message.channel.awaitMessages(filte, { max: 1, time: 15000, errors: ['time'] })
+.then(collected =>{ 
+   message.channel.send(`**${message.author} تم رفض عرضك**`);
+})
+
+const secreT = [
+  "**الحياة بكل ما فيها تقف دائمًا على حد الوسطية بين اتزان المعنى وضده من حب وكره وحق وباطل وعدل وظلم**.",
+  "**كى تعيش عليك ان تتقن فن التجاهل باحتراف**.",
+  "**لا تحزن على من اشعرك بان طيبتك غباء امام وقاحته**.",
+  "**هناك من يحلم بالنجاح وهناك من يستيقظ باكرا لتحقيقه**.",
+  "**ان تعالج ألمك بنفسك تلك هى القوة**.", 
+  "**الجميع يسمع ما تقول والاصدقاء ينصتون لما تقول وافضل الاصدقاء ينصتون لما اخفاه سكوتك**.", 
+  "**انتهى زمن الفروسية ، لم تنقرض الخيول بل انقرض الفرسان**.", 
+  "**ان تكون اخرسا عاقلا خير من ان تكون نطوقا جهولا**.", 
+  "**المناقشات العقيمة لا تنجب افكارا**.", 
+  "**نحن نكتب ما لا نستطيع ان نقول وما نريد ان يكون**.", 
+  "**نحن نكتب ما لا نستطيع ان نقول وما نريد ان يكون**.", 
 ]
 
 
  client.on('message', message => {
-   if (message.content.startsWith("!لوخيروك")) {
+   if (message.content.startsWith("!خواطر")) {
                 if(!message.channel.guild) return message.reply('** This command only for servers**');
   var embed = new Discord.RichEmbed()
   .setColor('RANDOM')
 
    .setThumbnail(message.author.avatarURL) 
- .addField('لعبه لو خيروك' ,
-  `${secre[Math.floor(Math.random() * secre.length)]}`)
+ .addField('لعبه خواطر' ,
+  `${secreT[Math.floor(Math.random() * secreT.length)]}`)
   message.channel.sendEmbed(embed);
   console.log('[id] Send By: ' + message.author.username)
     }
 });
-
+        
 client.login(process.env.BOT_TOKEN);
