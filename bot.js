@@ -72,8 +72,8 @@ var cats = [
 "https://cdn.discordapp.com/attachments/479044877745782801/479046349644365827/images.jpg"
 ]
     client.on('message', message => {
-        var args = message.content.split("-").slice(1);
-    if(message.content.startsWith(prefix + 'هل تعلم')) {
+        var args = message.content.split(" ").slice(1);
+    if(message.content.startsWith(prefix + '-هل تعلم')) {
          var cat = new Discord.RichEmbed()
 .setImage(cats[Math.floor(Math.random() * cats.length)])
 message.channel.sendEmbed(cat);
