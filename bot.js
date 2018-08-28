@@ -597,7 +597,7 @@ const type = [
 ];
  
 client.on('message', message => {
-if (points[message.author.id]) points[message.author.id] = {
+  if (!points[message.author.id]) points[message.author.id] = {
     points: 0,
   };
   if(!message.guild) return;
@@ -608,7 +608,7 @@ if (points[message.author.id]) points[message.author.id] = {
     message.channel.send(`**Sorry, Please Wait ${pretty(r, {verbose:true})}...**`).then(m => m.delete(5000));
     return;
     }
-    if ( message.content == prefix+'speed'){
+    if ( message.content == prefix+'اسرع كاتب'){
        
         try{
 }catch(e){
