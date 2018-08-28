@@ -222,12 +222,12 @@ client.on('message', message => {
   if (message.content.startsWith(adminprefix + 'st')) {
     client.user.setGame(argresult, "https://www.twitch.tv/idk");
       message.channel.send(:white_check_mark:)
-  }
+  } else
   if (message.content.startsWith(adminprefix + 'setname')) {
   client.user.setUsername(argresult).then
       message.channel.send(Changing The Name To ..${argresult} )
-} else
-if (message.content.startsWith(adminprefix + 'setavatar')) {
+  } else
+  if (message.content.startsWith(adminprefix + 'setavatar')) {
   client.user.setAvatar(argresult);
     message.channel.send(Changing The Avatar To :${argresult} `);
 }
