@@ -344,7 +344,7 @@ message.channel.sendEmbed(cat);
 });
 
 client.on('message', message => {
-  if(message.content.startsWith(prefix + "صراحة")) {
+  if(message.content.startsWith(prefix + "!صراحة")) {
     let mention = message.mentions.users.first();
     let args = message.content.split(' ').slice(2).join(' ');
     let filter = s => s.author.id === message.author.id;
