@@ -233,157 +233,93 @@ if (message.content.startsWith(adminprefix + 'setavatar')) {
 }
 });
 
-const pubg = [
-     'PUBG | ما هو اقوي سلاح برائيك ؟',
-     'PUBG | اين تجد سلاح الجروزا ؟ Grozza',
-     'PUBG | ماذا تفضل اكثر ام فور ام سكار ؟',
-     'PUBG | ايهما تفضل vss ام Awm',
-     'PUBG | ماذا تفضل اكثر ؟ سولو ام سكواد ؟',
-     'PUBG | كم جيم كسبت في العبه ؟',
-     'PUBG | ما هو اكثر عدد قتلت في مسيرتك بالعبه',
-     'PUBG | اذا انت المركز ال 2 هل سوف تقوم بتمشي علي رجلك ام ستاخذ سياره تحميك ؟',
-     'PUBG | اذا وجدت شخصين يتقاتلان , هل سوف تتقاتل معهم ام تنتظر قليلا حتي يقتل احدهما الاخر ؟',
-     'PUBG | اذا صديقك بالاسكواد يحتاج مساعده هل تساعده ام تتركه ؟',
-     'PUBG | اذا تم عمل لصديقك كونك اوت وامامك لوت كثير جدا سوف تذهب لتساعده ام تاخذ الوت وتدعه يموت ؟',
-     'PUBG | اين تجد ملابس القناصه ؟ ghillie suit ?',
-     'PUBG | ايهما تفضل ؟ الاختباء حتي يتبقي اشخاص قليله ام تذهب لتقتل ولا تختبئ',
-     'PUBG | اين تفضل ان تهبط من الطائره ؟ الاماكن الهادئيا لوت صغير ام الاماكن المزدحمه بالاعبين لاكن لوت كثير',
-     'PUBG | كم عدد المرات التي فزت بها لوحدك سولو ؟',
-     'PUBG | ما هو افضل سلاح تجيد استخدامه ؟',
-     'PUBG | ما هو اندر سلاح قد تجده برائيك ؟',
-     'PUBG | ما هو اندر سلاح جديد قد تجده برائيك ؟',
-     'PUBG | ما هو عدوك في العبه لاق البنق ام لاق الفريمات الاف بي اس ؟',
-     'PUBG | ايهما تفضل العب ؟ فـ المساء ام الصباح ؟',
-     'PUBG | هل تحب ان يكون الجيم ملئ بلاعبين ام لاعبين قليلين ؟',
-     'PUBG | هل الملابس تعبر عن انك محترف ام لا ؟',
-     'PUBG | كم معك من مال ( كوين ) بلعبه ؟',
-     'PUBG | ما هو اكثر شئ تكرهه في العبه ؟',
-     'PUBG | ما هو اكثر شئ تحبه بلعبه ؟',
-     'PUBG | ماذا تفضل شتو قن ( بندقيه ) ام قناصه ؟',
-     'PUBG | ماذا تفضل اكثر ؟ درع لفل 3 متضرر ام درع لفل 2 غير متضرر',
-     'PUBG | تفضل ان تلعب مع صديقك سكواد ام شخص غريب ؟',
-     'PUBG | هل تظن انك افضل شخص في اصدقائك بهذه اللعبه؟',
-     'PUBG | قيم نفسك من 10 كـ احتراف لك بالعبه',
-     'PUBG | هل فزت جيم من قبل بالعبه ؟',
-     'PUBG | هل وصلت للمركز ال 10 ( توب 10 ) قبل هكذا بلعبه ؟',
-     'PUBG | هل قمت بلعب مع صديقك من قبل بلعبه ؟',
-     'PUBG | هل تعلم من اخترع العبه ؟',
-     'PUBG | لو خيروك لعبه ببجي ام فورت نايت ؟',
-     'PUBG | هل يوجد شخص من اصدقاءك محترف اكثر منك ام انت اكثر شخص محترف ما بين اصدقاءك ؟',
-     'PUBG | اذا كنت من فريق مطورين العبه ماذا ستفعل ؟',
-     'PUBG | قيم من 10 مدي حبك للعبه',
-     'PUBG | هل تحب ان تتكلم صوت مع اصدقاءك وانت تلعب معاهم ام لا تحب هذا الامر ؟',
- 
-]
-   client.on('message', message => {
-       if (message.author.bot) return;
- if (message.content.startsWith('!pubg')) {
-     if(!message.channel.guild) return message.reply('** This command only for servers **');
-  var client= new Discord.RichEmbed()
-  .setTitle("لعبه اسئله باتل جرواند")
-  .setColor('#FFA500')
-  .setDescription(`!{pubg[Math.floor(Math.random() * pubg.length)]}`)
-  .setImage("https://cdn.discordapp.com/attachments/416617103492251658/477741838292484127/pubg-orange-square.png")
-                  .setTimestamp()
- 
-   message.channel.sendEmbed(client);
-   message.react("??")
- }
-});
 
-var cats = [
 
-"https://cdn.discordapp.com/attachments/479044877745782801/479045993132720128/download_1.jpg",
-"https://cdn.discordapp.com/attachments/479044877745782801/479046003937247253/download_2.jpg",
-"https://cdn.discordapp.com/attachments/479044877745782801/479046011956887552/download_3.jpg",
-"https://cdn.discordapp.com/attachments/479044877745782801/479046019904962562/download_4.jpg",
-"https://cdn.discordapp.com/attachments/479044877745782801/479046030214692864/download_5.jpg",
-"https://cdn.discordapp.com/attachments/479044877745782801/479046039794352151/download_6.jpg",
-"https://cdn.discordapp.com/attachments/479044877745782801/479046055581974549/download_7.jpg",
-"https://cdn.discordapp.com/attachments/479044877745782801/479046065367154712/download.jpg",
-"https://cdn.discordapp.com/attachments/479044877745782801/479046084442980354/images_1.jpg",
-"https://cdn.discordapp.com/attachments/479044877745782801/479046105674547216/images_4.jpg",
-"https://cdn.discordapp.com/attachments/479044877745782801/479046113945583639/images_5.jpg",
-"https://cdn.discordapp.com/attachments/479044877745782801/479046119838580756/images_6.jpg",
-"https://cdn.discordapp.com/attachments/479044877745782801/479046131796672513/images_7.jpg",
-"https://cdn.discordapp.com/attachments/479044877745782801/479046143318425621/images_8.jpg",
-"https://cdn.discordapp.com/attachments/479044877745782801/479046152491368448/images_9.jpg",
-"https://cdn.discordapp.com/attachments/479044877745782801/479046158979825686/images_10.jpg",
-"https://cdn.discordapp.com/attachments/479044877745782801/479046162247188498/images_11.jpg",
-"https://cdn.discordapp.com/attachments/479044877745782801/479046196434960416/images_12.jpg",
-"https://cdn.discordapp.com/attachments/479044877745782801/479046214571130882/images_13.jpg",
-"https://cdn.discordapp.com/attachments/479044877745782801/479046219528929290/images_14.jpg",
-"https://cdn.discordapp.com/attachments/479044877745782801/479072892022161408/images_15.jpg",
-"https://cdn.discordapp.com/attachments/479044877745782801/479046222045511685/images_16.jpg",
-"https://cdn.discordapp.com/attachments/479044877745782801/479046225086382081/images_18.jpg",
-"https://cdn.discordapp.com/attachments/479044877745782801/479046228047560736/images_19.jpg",
-"https://cdn.discordapp.com/attachments/479044877745782801/479046230794829834/images_20.jpg",
-"https://cdn.discordapp.com/attachments/479044877745782801/479046233533710336/images_21.jpg",
-"https://cdn.discordapp.com/attachments/479044877745782801/479074274850766863/images_22.jpg",
-"https://cdn.discordapp.com/attachments/479044877745782801/479046289477337089/images_23.jpg",
-"https://cdn.discordapp.com/attachments/479044877745782801/479046293436629041/images_24.jpg",
-"https://cdn.discordapp.com/attachments/479044877745782801/479046294925606914/images_25.jpg",
-"https://cdn.discordapp.com/attachments/479044877745782801/479046303330992169/images_26.jpg",
-"https://cdn.discordapp.com/attachments/479044877745782801/479046307072311317/images_27.jpg",
-"https://cdn.discordapp.com/attachments/479044877745782801/479046315100340224/images_28.jpg",
-"https://cdn.discordapp.com/attachments/479044877745782801/479046325619392537/images_29.jpg",
-"https://cdn.discordapp.com/attachments/479044877745782801/479046333114875907/images_30.jpg",
-"https://cdn.discordapp.com/attachments/479044877745782801/479046334825889807/images_31.jpg",
-"https://cdn.discordapp.com/attachments/479044877745782801/479046338718466058/images_32.jpg",
-"https://cdn.discordapp.com/attachments/479044877745782801/479046340379148288/images_33.jpg",
-"https://cdn.discordapp.com/attachments/479044877745782801/479046342795198484/images_34.jpg",
-"https://cdn.discordapp.com/attachments/479044877745782801/479046349644365827/images.jpg"
-]
-    client.on('message', message => {
-        var args = message.content.split(" ").slice(1);
-    if(message.content.startsWith(prefix + '!هل تعلم')) {
-         var cat = new Discord.RichEmbed()
-.setImage(cats[Math.floor(Math.random() * cats.length)])
-message.channel.sendEmbed(cat);
-    }
+
+const Discord = require("discord.js");
+const fs = require("fs")
+const client = new Discord.Client();
+client.on('ready', () => {
+    console.log(`Logged in as ${client.user.tag}!`);
+    console.log(`in ${client.guilds.size} servers `)
+    console.log(`[Users] ${client.users.size}`)
+	client.user.setGame(`Discord.JPEI | $help`,"http://twitch.tv/WeDontHaveChannel")
+    client.user.setStatus("dnd")
 });
+let points = JSON.parse(fs.readFileSync('./typing/typePTS.json', 'utf8')); // يقوم بقراءه ملف النقاط , والمسار حق النقاط
+const prefix = "."; // البرفكس العام لجميع الأوامر
 
 client.on('message', message => {
-  if(message.content.startsWith(prefix + "!صراحة")) {
-    let mention = message.mentions.users.first();
-    let args = message.content.split(' ').slice(2).join(' ');
-    let filter = s => s.author.id === message.author.id;
- 
-    var msg;
- 
-    if(!mention) return message.channel.send(':x:| **منشن الشخص المطلوب ارسال الرسالة له**');
-    if(mention === client.user) return message.channel.send(':x:| **لا يمكنني ارسال رسالة لنفسي**');
-    if(mention.bot) return message.channel.send(':x:| **لا يمكنك ارسال الرسالة لبوت**');
-    if(mention === message.author) return message.channel.send(':x:| **لا يمكنك مصارحة نفسك**').then(m => { m.delete(3500)});
-    if(mention && !args) {
-      message.delete();
-      message.channel.send(`⚒| **\`عملية اعادة البناء\` انت لم تقم بكتابة الرسالة  اكتبها الان .. امامك 30 ثانية**`).then(m => {
-        message.channel.awaitMessages(filter, {
-          max: 1,
-          time: 30000,
-          errors: ['time']
-        }).then(collected => {
-          msg = collected.first().content;
-          collected.first().delete();
-          try {
-            m.edit(':white_check_mark:| **تم ارسال الصراحة**');
-            mention.send(`${mention}, لقد تم مصارحتك\n» الرسالة : ${msg}\n» التاريخ : ${moment().format('MMM Do YY')}`);
-          } catch(e) {
-            message.channel.send(':x:| **لم استطع ارسال الرسالة**');
-          }
-        });
-      });
-    } else if(mention && args) {
-      message.delete();
-      try {
-        message.channel.send(':white_check_mark:| **تم ارسال الصراحة**');
-        mention.send(`${mention}, لقد تم مصارحتك\n» الرسالة : ${args}\n» التاريخ : ${moment().format('MMM Do YY')}`);
-      } catch(e) {
-        console.log(e);
-        message.channel.send(':x:| **لم استطع ارسال الرسالة**');
-      }
-    }
-  }
+if (!points[message.author.id]) points[message.author.id] = { // يقوم الكود تلقائياً في حال لم يجد نقاط العضو بإنشاء نقاط له ويتم إرسالها الملف المخصص
+	points: 0,
+  };
+if (message.content.startsWith(prefix + 'سرعة')) { // .سرعة
+	if(!message.channel.guild) return message.reply('**هذا الأمر للسيرفرات فقط**').then(m => m.delete(3000));
+
+const type = require('./typing/type.json'); // في هذا السطر يقوم الكود بقراءة ملف الأسئلة
+const item = type[Math.floor(Math.random() * type.length)]; // الأرراي المخصص للأسئلة
+const filter = response => { // في هذا السطر يقوم بصنع فلتر للأجوبة
+    return item.answers.some(answer => answer.toLowerCase() === response.content.toLowerCase());
+};
+message.channel.send('**لديك 15 ثانية لكتابة الكلمة**').then(msg => {
+	let embed = new Discord.RichEmbed()
+	.setColor('#000000')
+	.setFooter("سرعة كتابة | لرؤية مجموع نقاطك اكتب $نقاطي |", 'https://c.top4top.net/p_814rjkod1.png')
+	.setDescription(`**قم بكتابة : ${item.type}**`) // ${item.type} = السؤال
+	
+	msg.channel.sendEmbed(embed).then(() => {
+        message.channel.awaitMessages(filter, { maxMatches: 1, time: 15000, errors: ['time'] })
+        .then((collected) => {
+		message.channel.send(`${collected.first().author} ✅ **لقد قمت بكتابة الكلمة بالوقت المناسب**`);
+		console.log(`[Typing] ${collected.first().author} typed the word.`);
+            let won = collected.first().author; // في هذا السطر يقوم الكود بسحب الأي دي الذي قام بالأجابة اولاً
+            points[won.id].points++;
+          })
+          .catch(collected => { // في حال لم يقم أحد بالإجابة
+            message.channel.send(`:x: **لم يقم أحد بكتابة الجملة بالوقت المناسب**`);
+			console.log(`[Typing] Error: No one type the word.`);
+          })
+		})
+	})
+}
 });
+client.on('message', message => {
+if (message.content.startsWith(prefix + 'نقاطي')) {
+	if(!message.channel.guild) return message.reply('**هذا الأمر للسيرفرات فقط**').then(m => m.delete(3000));
+	let userData = points[message.author.id];
+	let embed = new Discord.RichEmbed()
+    .setAuthor(`${message.author.tag}`, message.author.avatarURL)
+	.setColor('#000000')
+	.setFooter("بوت سرعة الكتابة", '')
+	.setDescription(`نقاطك: \`${userData.points}\``)
+	message.channel.sendEmbed(embed)
+  }
+  fs.writeFile("./typePTS.json", JSON.stringify(points), (err) => {
+    if (err) console.error(err)
+  })
+});
+client.on('guildCreate', guild => {
+	console.log(`Added to a server by: ${guild.owner.user.username} || Server name: ${guild.name} || Users: ${guild.memberCount}`); // ايفنت يقوم بإرسال إلى الكونسل بأنه قد قامت احد السيرفر بدعوة البوت
+});
+client.on('message', message => {
+if (message.content.startsWith(prefix + 'help')) {
+	if(!message.channel.guild) return message.reply('**هذا الأمر للسيرفرات فقط**').then(m => m.delete(300));
+	let embed = new Discord.RichEmbed()
+    .setAuthor(`${message.author.tag}`, message.author.avatarURL)
+	.setColor('RANDOM')
+	.addField(".سرعة","**لبدأ لعبة سرعة الكتابة**")
+	.addField(".نقاطي","**لعرض النقاط الخاصة بك**")
+.addField("**--------------------------------**","** **")
+.addField("**بعض لاالعاب قادمه وشكرا**","** **")
+ .addField("** BY :wrench: **","**™ » <@431150885549113344>**")
+	.setFooter("Games-Bot", 'https://cdn3.iconfinder.com/data/icons/forall/110/game-128.png')
+	message.channel.sendEmbed(embed).then(m => m.delete(15000));
+
+}
+});
+client.login("NDgzNDQxMjkwNDQ5NzgwNzQ3.Dml1aQ.bKDkUHrT9zTHk_f6tOFJhbpkaUI");
+
+
+
 
 client.login(process.env.BOT_TOKEN);
