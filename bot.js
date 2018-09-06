@@ -235,7 +235,7 @@ if (message.content.startsWith(adminprefix + 'setavatar')) {
 
 
  client.on('message', message => {
-if(message.content.startsWith("$slots")) {
+if(message.content.startsWith("!فواكه")) {
   let slot1 = ['🍏', '🍇', '🍒', '🍍', '🍅', '🍆', '🍑', '🍓'];
   let slots1 = `${slot1[Math.floor(Math.random() * slot1.length)]}`;
   let slots2 = `${slot1[Math.floor(Math.random() * slot1.length)]}`;
@@ -252,7 +252,7 @@ if(message.content.startsWith("$slots")) {
 client.on('message', async ReBeLL => {
 if(ReBeLL.author.bot) return;
 if (ReBeLL.channel.guild) {
-if (ReBeLL.content.startsWith(prefix + `8ball`)) {
+if (ReBeLL.content.startsWith(prefix + `!كره`)) {
     let argsReBeL = ReBeLL.content.split(' ').slice(1).join(' ');
     let authorReBeL = ReBeLL.author.username;
 
