@@ -250,56 +250,80 @@ if(message.content.startsWith("!فواكه")) {
 }
 });
 
-var cats = [
-
-"https://cdn.discordapp.com/attachments/479044877745782801/479045993132720128/download_1.jpg",
-"https://cdn.discordapp.com/attachments/479044877745782801/479046003937247253/download_2.jpg",
-"https://cdn.discordapp.com/attachments/479044877745782801/479046011956887552/download_3.jpg",
-"https://cdn.discordapp.com/attachments/479044877745782801/479046019904962562/download_4.jpg",
-"https://cdn.discordapp.com/attachments/479044877745782801/479046030214692864/download_5.jpg",
-"https://cdn.discordapp.com/attachments/479044877745782801/479046039794352151/download_6.jpg",
-"https://cdn.discordapp.com/attachments/479044877745782801/479046055581974549/download_7.jpg",
-"https://cdn.discordapp.com/attachments/479044877745782801/479046065367154712/download.jpg",
-"https://cdn.discordapp.com/attachments/479044877745782801/479046084442980354/images_1.jpg",
-"https://cdn.discordapp.com/attachments/479044877745782801/479046105674547216/images_4.jpg",
-"https://cdn.discordapp.com/attachments/479044877745782801/479046113945583639/images_5.jpg",
-"https://cdn.discordapp.com/attachments/479044877745782801/479046119838580756/images_6.jpg",
-"https://cdn.discordapp.com/attachments/479044877745782801/479046131796672513/images_7.jpg",
-"https://cdn.discordapp.com/attachments/479044877745782801/479046143318425621/images_8.jpg",
-"https://cdn.discordapp.com/attachments/479044877745782801/479046152491368448/images_9.jpg",
-"https://cdn.discordapp.com/attachments/479044877745782801/479046158979825686/images_10.jpg",
-"https://cdn.discordapp.com/attachments/479044877745782801/479046162247188498/images_11.jpg",
-"https://cdn.discordapp.com/attachments/479044877745782801/479046196434960416/images_12.jpg",
-"https://cdn.discordapp.com/attachments/479044877745782801/479046214571130882/images_13.jpg",
-"https://cdn.discordapp.com/attachments/479044877745782801/479046219528929290/images_14.jpg",
-"https://cdn.discordapp.com/attachments/479044877745782801/479072892022161408/images_15.jpg",
-"https://cdn.discordapp.com/attachments/479044877745782801/479046222045511685/images_16.jpg",
-"https://cdn.discordapp.com/attachments/479044877745782801/479046225086382081/images_18.jpg",
-"https://cdn.discordapp.com/attachments/479044877745782801/479046228047560736/images_19.jpg",
-"https://cdn.discordapp.com/attachments/479044877745782801/479046230794829834/images_20.jpg",
-"https://cdn.discordapp.com/attachments/479044877745782801/479046233533710336/images_21.jpg",
-"https://cdn.discordapp.com/attachments/479044877745782801/479074274850766863/images_22.jpg",
-"https://cdn.discordapp.com/attachments/479044877745782801/479046289477337089/images_23.jpg",
-"https://cdn.discordapp.com/attachments/479044877745782801/479046293436629041/images_24.jpg",
-"https://cdn.discordapp.com/attachments/479044877745782801/479046294925606914/images_25.jpg",
-"https://cdn.discordapp.com/attachments/479044877745782801/479046303330992169/images_26.jpg",
-"https://cdn.discordapp.com/attachments/479044877745782801/479046307072311317/images_27.jpg",
-"https://cdn.discordapp.com/attachments/479044877745782801/479046315100340224/images_28.jpg",
-"https://cdn.discordapp.com/attachments/479044877745782801/479046325619392537/images_29.jpg",
-"https://cdn.discordapp.com/attachments/479044877745782801/479046333114875907/images_30.jpg",
-"https://cdn.discordapp.com/attachments/479044877745782801/479046334825889807/images_31.jpg",
-"https://cdn.discordapp.com/attachments/479044877745782801/479046338718466058/images_32.jpg",
-"https://cdn.discordapp.com/attachments/479044877745782801/479046340379148288/images_33.jpg",
-"https://cdn.discordapp.com/attachments/479044877745782801/479046342795198484/images_34.jpg",
-"https://cdn.discordapp.com/attachments/479044877745782801/479046349644365827/images.jpg"
+const Sra7a = [
+     'صراحه  |  صوتك حلوة؟',
+     'صراحه  |  التقيت الناس مع وجوهين؟',
+     'صراحه  |  شيء وكنت تحقق اللسان؟',
+     'صراحه  |  أنا شخص ضعيف عندما؟',
+     'صراحه  |  هل ترغب في إظهار حبك ومرفق لشخص أو رؤية هذا الضعف؟',
+     'صراحه  |  يدل على أن الكذب مرات تكون ضرورية شي؟',
+     'صراحه  |  أشعر بالوحدة على الرغم من أنني تحيط بك كثيرا؟',
+     'صراحه  |  كيفية الكشف عن من يكمن عليك؟',
+     'صراحه  |  إذا حاول شخص ما أن يكرهه أن يقترب منك ويهتم بك تعطيه فرصة؟',
+     'صراحه  |  أشجع شيء حلو في حياتك؟',
+     'صراحه  |  طريقة جيدة يقنع حتى لو كانت الفكرة خاطئة" توافق؟',
+     'صراحه  |  كيف تتصرف مع من يسيئون فهمك ويأخذ على ذهنه ثم ينتظر أن يرفض؟',
+     'صراحه  |  التغيير العادي عندما يكون الشخص الذي يحبه؟',
+     'صراحه  |  المواقف الصعبة تضعف لك ولا ترفع؟',
+     'صراحه  |  نظرة و يفسد الصداقة؟',
+     'صراحه  |  ‏‏إذا أحد قالك كلام سيء بالغالب وش تكون ردة فعلك؟',
+     'صراحه  |  شخص معك بالحلوه والمُره؟',
+     'صراحه  |  ‏هل تحب إظهار حبك وتعلقك بالشخص أم ترى ذلك ضعف؟',
+     'صراحه  |  تأخذ بكلام اللي ينصحك ولا تسوي اللي تبي؟',
+     'صراحه  |  وش تتمنى الناس تعرف عليك؟',
+     'صراحه  |  ابيع المجرة عشان؟',
+     'صراحه  |  أحيانا احس ان الناس ، كمل؟',
+     'صراحه  |  مع مين ودك تنام اليوم؟',
+     'صراحه  |  صدفة العمر الحلوة هي اني؟',
+     'صراحه  |  الكُره العظيم دايم يجي بعد حُب قوي " تتفق؟',
+     'صراحه  |  صفة تحبها في نفسك؟',
+     'صراحه  |  ‏الفقر فقر العقول ليس الجيوب " ، تتفق؟',
+     'صراحه  |  تصلي صلواتك الخمس كلها؟',
+     'صراحه  |  ‏تجامل أحد على راحتك؟',
+     'صراحه  |  اشجع شيء سويتة بحياتك؟',
+     'صراحه  |  وش ناوي تسوي اليوم؟',
+     'صراحه  |  وش شعورك لما تشوف المطر؟',
+     'صراحه  |  غيرتك هاديه ولا تسوي مشاكل؟',
+     'صراحه  |  ما اكثر شي ندمن عليه؟',
+     'صراحه  |  اي الدول تتمنى ان تزورها؟',
+     'صراحه  |  متى اخر مره بكيت؟',
+     'صراحه  |  تقيم حظك ؟ من عشره؟',
+     'صراحه  |  هل تعتقد ان حظك سيئ؟',
+     'صراحه  |  شـخــص تتمنــي الإنتقــام منـــه؟',
+     'صراحه  |  كلمة تود سماعها كل يوم؟',
+     'صراحه  |  **هل تُتقن عملك أم تشعر بالممل؟',
+     'صراحه  |  هل قمت بانتحال أحد الشخصيات لتكذب على من حولك؟',
+     'صراحه  |  متى آخر مرة قمت بعمل مُشكلة كبيرة وتسببت في خسائر؟',
+     'صراحه  |  ما هو اسوأ خبر سمعته بحياتك؟',
+     '‏صراحه | هل جرحت شخص تحبه من قبل ؟',
+     'صراحه  |  ما هي العادة التي تُحب أن تبتعد عنها؟',
+     '‏صراحه | هل تحب عائلتك ام تكرههم؟',
+     '‏صراحه  |  من هو الشخص الذي يأتي في قلبك بعد الله – سبحانه وتعالى- ورسوله الكريم – صلى الله عليه وسلم؟',
+     '‏صراحه  |  هل خجلت من نفسك من قبل؟',
+     '‏صراحه  |  ما هو ا الحلم  الذي لم تستطيع ان تحققه؟',
+     '‏صراحه  |  ما هو الشخص الذي تحلم به كل ليلة؟',
+     '‏صراحه  |  هل تعرضت إلى موقف مُحرج جعلك تكره صاحبهُ؟',
+	  '‏صراحه  |  هل قمت بالبكاء أمام من تُحب؟',
+     '‏صراحه  |  ماذا تختار حبيبك أم صديقك؟',
+     '‏صراحه  | هل حياتك سعيدة أم حزينة؟',
+     'صراحه  |  ما هي أجمل سنة عشتها بحياتك؟',
+     '‏صراحه  |  ما هو عمرك الحقيقي؟',
+     '‏صراحه  |  ما اكثر شي ندمن عليه؟',
+	 'صراحه  |  ما هي أمنياتك المُستقبلية؟‏',
 ]
-    client.on('message', message => {
-        var args = message.content.split(" ").slice(1);
-    if(message.content.startsWith(prefix + '!هل تعلم')) {
-         var cat = new Discord.RichEmbed()
-.setImage(cats[Math.floor(Math.random() * cats.length)])
-message.channel.sendEmbed(cat);
-    }
+   client.on('message', message => {
+ if (message.content.startsWith(prefix + "صراحة")) {
+     if(!message.channel.guild) return message.reply('** This command only for servers **');
+  var client= new Discord.RichEmbed()
+  .setTitle("لعبة صراحة ..")
+  .setColor('RANDOM')
+  .setDescription(`${Sra7a[Math.floor(Math.random() * Sra7a.length)]}`)
+  .setImage("https://cdn.discordapp.com/attachments/371269161470525444/384103927060234242/125.png")
+                  .setTimestamp()
+
+   message.channel.sendEmbed(client);
+   message.react("??")
+ }
 });
 
 
