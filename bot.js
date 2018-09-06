@@ -320,8 +320,11 @@ var aoasm =[
     
     
    ];
-   client.on("message", async message => {
-    if(message.content == prefix+"!عواصم"){
+   client.on('message', message => {
+   if (message.content.startsWith("!عواصم")) {
+                if(!message.channel.guild) return message.reply('** This command only for servers**');
+  var embed = new Discord.RichEmbed()
+  .setColor('RANDOM')
         if(UserBlocked.has(message.guild.id)) return message.channel.send("هناك جلسة .")
         UserBlocked.add(message.guild.id)
         var ask = aoasm[Math.floor(Math.random() * aoasm.length)];
